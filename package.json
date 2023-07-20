@@ -2,6 +2,12 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider & turbo run dev --parallel",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider & turbo run build"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.9"
+  }
 }
-
